@@ -95,16 +95,6 @@ class display:
         self.bottom_right = None
         self.bottom = None    
 
-class wires:
-    def __init__(self):
-        self.a = None
-        self.b = None
-        self.c = None
-        self.d = None
-        self.e = None
-        self.f = None
-        self.g = None
-
 def get_number_mapping(position):
     number_dict = {
         '0': position.top + position.top_left + position.top_right + position.bottom_left + position.bottom_right + position.bottom,
