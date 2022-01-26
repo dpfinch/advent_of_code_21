@@ -4,6 +4,7 @@
 import pandas as pd
 import numpy as np
 import math
+from matplotlib import pyplot as plt
 ### ============================================================================
 
 # Part One
@@ -34,7 +35,10 @@ for step in range(100):
                     flashed[x,y] = 1
                     pad_grid[x-1:x+2,y-1:y+2] += 1
                       
-        pad_grid[flashed == 1] = 0 
+        pad_grid[flashed == 1] = 0
+    plt.imshow(pad_grid[1:11,1:11])
+    plt.savefig('/Users/dfinch/Desktop/flashes/flashes_step{}.png'.format(str(step).zfill(3)))
+    plt.close()
                         
 print('Total number of flashes in 100 steps: {}'.format(total_flashes))
 # Part Two
